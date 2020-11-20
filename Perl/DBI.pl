@@ -1,5 +1,7 @@
 #!/usr/bin/perl
 
+# Execute quick MYSQL request
+
 use DBI;
 use Encode;
 use Data::Dumper;
