@@ -1,4 +1,4 @@
-## Quickie PHP to send contacts to Telegram
+## Quickie PHP to send contact/order details to Telegram
 
 #### tg_bot_send_message.php
 - Gets `client_name` and `client_tel` from html/js form
