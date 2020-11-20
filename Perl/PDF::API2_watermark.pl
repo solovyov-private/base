@@ -1,3 +1,5 @@
+# Paste TEST or other watermark diagonally
+#
 sub WatermarkPDF {
 my($file, $caption, $options) = @_;
 my($file_targ) = dirname($file)."/test.".basename($file);
