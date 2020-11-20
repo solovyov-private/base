@@ -1,1 +1,1 @@
-Here is my quick memo for various cases
+Here is my tips for various cases
