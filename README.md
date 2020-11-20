@@ -1,5 +1,5 @@
 ## Some tips
-#### linux.md
+#### [linux.md](linux.md)
 bash & apps
 
 #### db.md
