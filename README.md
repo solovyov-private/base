@@ -6,7 +6,7 @@ bash & apps
 firebird, sqlite, mysql
 
 #### ./Docker/
-Archlinux image deploy
+Archlinux image deploy on Windows
 
 #### ./PDF/
 pdftotext.sh - fetch texts from PDFs with pdftotext
