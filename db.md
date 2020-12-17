@@ -61,10 +61,16 @@ SET FIELD = CONVERT(BINARY FIELD USING latin1/utf8)
 
 #### MYSQLDUMP
 - each insert line in row
+```
 mysqldump --extended-insert=FALSE or --skip-extended-insert
+```
 
 - skip add/drop table
+```
 mysqldump --skip-add-drop-table
+```
 
 - where clause
+```
 mysqldump --where="datetime LIKE '2014-09%'"
+```
