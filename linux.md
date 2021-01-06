@@ -110,6 +110,11 @@ touch -t 1906092005 filename
 sftp -oServerAliveInterval=300
 ```
 
+- socks proxy to local port 9999
+```
+ssh -D localhost:9999 user@host
+```
+
 #### VIM
 - jump to 2000's symbol in line
 ```
