@@ -115,6 +115,16 @@ sftp -oServerAliveInterval=300
 ssh -D localhost:9999 user@host
 ```
 
+- ssh through intermediate host
+```
+ssh -t user@intermediatehost ssh user@targethost
+```
+
+- sftp through intermediate host
+```
+sftp -J user@intermediatehost user@targethost
+```
+
 #### VIM
 - jump to 2000's symbol in line
 ```
