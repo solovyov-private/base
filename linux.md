@@ -26,6 +26,17 @@ find . -name "*.gz" -type f -print0 | xargs -0 gunzip
 find . -name \*.txt.gz -print0 | xargs -0 zgrep "Bank"
 ```
 
+###### TAR.GZ:
+- create
+```
+tar -czf --exclude='regex' archive.tar.gz file.txt
+```
+
+- unpack
+```
+tar -xzf archive.tar.gz
+```
+
 #### FETCH
 - extract all files from folders to .
 ```
@@ -38,7 +49,7 @@ find . -name "*.xml" -exec sh -c "cp {} ./" \;
 ```
 or
 ```
-find / -type f \( -iname "linux*" \) -print0 | while IFS= read -r -d $'\0' line; do cp -p $line ./; done;
+find / -type f \( -iname "*.xml" \) -print0 | while IFS= read -r -d $'\0' line; do cp -p $line ./; done;
 ```
 
 - count lines in files .cpp
@@ -47,23 +58,9 @@ find . -name '*.cpp' -type f -print0 | xargs -0 cat | wc -l
 ```
 
 #### RENAME
-- extension to small letters
-```
-for old in *.PDF; do mv $old `basename $old .PDF`.pdf; done
-```
-
-- rename partially
-```
-rename -v .PDF .pdf *.PDF
-```
-
 - rename by mask:
 ```
-for i in `find . -type f -name "*Leisure*"`; do dst=`echo $i | sed s/Leisure/Default/`; mv $i $dst; echo "$i was renamed to $dst." ; done;
-```
-or
-```
-rename -v "Leisure" "Default" *.csv
+rename -v ".PDF" ".pdf" *.csv
 ```
 
 #### CONVERT
@@ -131,7 +128,7 @@ sftp -J user@intermediatehost user@targethost
 2000|
 ```
 
-- append end of tags />< with new line \r:
+- append a new line \r between tags:
 ```
 :%s#\/><#/>\r<#g
 ```
