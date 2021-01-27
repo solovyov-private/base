@@ -60,7 +60,7 @@ find . -name '*.cpp' -type f -print0 | xargs -0 cat | wc -l
 #### RENAME
 - rename by mask:
 ```
-rename -v ".PDF" ".pdf" *.csv
+rename -v ".PDF" ".pdf" *.PDF
 ```
 
 #### CONVERT
