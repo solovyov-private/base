@@ -121,6 +121,10 @@ ssh -t user@intermediatehost ssh user@targethost
 ```
 sftp -J user@intermediatehost user@targethost
 ```
+or
+```
+sftp -o "ProxyCommand=ssh -e none user@intermediatehost exec /usr/bin/nc %h %p 2>/dev/null" user@targethost
+```
 
 #### VIM
 - jump to 2000's symbol in line
