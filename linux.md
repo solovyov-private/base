@@ -91,6 +91,11 @@ GREP in files by mask:
 grep -R "OK" --include *.txt
 ```
 
+Replace phrase in files by mask
+```
+grep -Rl 'TEXT_TO_FIND' --include="*.htaccess" . | xargs sed -i 's#TEXT_TO_FIND#TEXT_TO_REPLACE#g'
+```
+
 #### DEDUPE
 ```
 cat file.txt | sort | uniq > dedup.out
