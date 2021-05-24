@@ -45,7 +45,7 @@ find . -type f -exec sh -c "cp {} ./" \;
 
 - extract all xml files to .
 ```
-find . -name "*.xml" -exec sh -c "cp {} ./" \;
+find . \( -iname \*.pdf -o -iname \*.xml -o -iname \*.xlsx \) -exec sh -c "cp {} ./" \;
 ```
 or
 ```
