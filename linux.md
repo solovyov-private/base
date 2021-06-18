@@ -141,3 +141,9 @@ sftp -o "ProxyCommand=ssh -e none user@intermediatehost exec /usr/bin/nc %h %p 2
 ```
 :%s#\/><#/>\r<#g
 ```
+
+#### SCREEN
+- run with log
+```
+screen -S TestNode_01 sh -c './script.sh 2>&1 | tee progress.txt'
+```
