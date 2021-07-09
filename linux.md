@@ -147,3 +147,7 @@ sftp -o "ProxyCommand=ssh -e none user@intermediatehost exec /usr/bin/nc %h %p 2
 ```
 screen -S TestNode_01 sh -c './script.sh 2>&1 | tee progress.txt'
 ```
+or
+```
+screen -S TestNode_01 bash -c 'python3 script.py 2>&1 | tee progress.txt'
+```
