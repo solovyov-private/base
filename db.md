@@ -79,6 +79,11 @@ mysqldump --extended-insert=FALSE or --skip-extended-insert
 mysqldump --skip-add-drop-table
 ```
 
+- skip everything
+```
+mysqldump --compact --no-create-info
+```
+
 - where clause
 ```
 mysqldump --where="datetime LIKE '2014-09%'"
