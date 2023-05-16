@@ -122,6 +122,14 @@ ssh -D localhost:9999 user@host
 ssh -t user@intermediatehost ssh user@targethost
 ```
 
+- link port 9999 on localhost with targethost:22 through intermediate host (9999 -> 9998 -> 22)
+```
+ssh -L 9999:localhost:9998 -t user1@intermediatehost ssh -L 9998:localhost:22 user2@targethost
+...
+# now connect to localhost:
+ssh -p 9999 user2@localhost
+```
+
 - sftp through intermediate host
 ```
 sftp -J user@intermediatehost user@targethost
