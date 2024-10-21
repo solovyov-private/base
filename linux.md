@@ -5,6 +5,11 @@
 unzip \*.zip
 ```
 
+- extract all files in archives creating subfolders for each archive
+```
+for f in *.zip; do unzip "$f" -d "${f%.zip}"; done
+```
+
 - recursively
 ```
 find . -name "*.zip" -exec unzip {} \;
