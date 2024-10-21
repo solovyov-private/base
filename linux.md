@@ -15,7 +15,7 @@ find . -name "*.zip" -exec unzip {} \;
 unzip -p {filename} > ...
 ```
 
-- find file in zip archives
+- find file by name in zip archives
 ```
 for f in *.zip; do unzip -l "$f" | grep TEXT && echo "Found in: $f"; done
 ```
