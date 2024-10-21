@@ -15,6 +15,11 @@ find . -name "*.zip" -exec unzip {} \;
 unzip -p {filename} > ...
 ```
 
+- find file in zip archives
+```
+for f in *.zip; do unzip -l "$f" | grep TEXT && echo "Found in: $f"; done
+```
+
 ###### GZIP:
 - gunzip recursively
 ```
@@ -23,7 +28,7 @@ find . -name "*.gz" -type f -print0 | xargs -0 gunzip
 
 - in gz files grep some text
 ```
-find . -name \*.txt.gz -print0 | xargs -0 zgrep "Bank"
+find . -name \*.txt.gz -print0 | xargs -0 zgrep "TEXT"
 ```
 
 ###### TAR.GZ:
