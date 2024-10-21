@@ -19,6 +19,10 @@ unzip -p {filename} > ...
 ```
 for f in *.zip; do unzip -l "$f" | grep TEXT && echo "Found in: $f"; done
 ```
+or
+```
+find . -name "*.zip" -exec sh -c 'unzip -l "$1" | grep TEXT && echo "Found in: $1"' _ {} \;
+```
 
 ###### GZIP:
 - gunzip recursively
